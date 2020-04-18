@@ -11,9 +11,8 @@ def sum(ar):
         else:
             e += 1
     print('{0:.5f}'.format(c/len(ar)))
-    print(round((c/len(ar)),5))
-    print(round((d/len(ar)),5))
-    print(round((e/len(ar)),5))
+    print('{0:.5f}'.format(d/len(ar)))
+    print('{0:.5f}'.format(e/len(ar)))
     return (c, d, e)
 
 if __name__ == "__main__":

@@ -8,7 +8,7 @@ def sum(ar):
         val += i
         print("the value is :", val)
 
-    return i
+    return val
 
 if __name__ == "__main__":
     global i
