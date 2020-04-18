@@ -1,7 +1,20 @@
-from array import array
-import itertools
-def sum(ar):
-    global i
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'diagonalDifference' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts 2D_INTEGER_ARRAY arr as parameter.
+#
+
+def diagonalDifference(ar):
+    # Write your code here
     pri = 0
     sec = 0
 
@@ -12,37 +25,21 @@ def sum(ar):
         sec += i[j]
 
     return abs(pri-sec)
+    
 
-if __name__ == "__main__":
-    # print("Enter")
-    n = (input("Enter: ").strip)
-    print(n)
-    print(len(n))
-    # n = list(map(int, n.rstrip().split()))
-    # n = array('L', n)
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input().strip())
+
     arr = []
 
     for _ in range(n):
-        arr.append(list(map(int, input().rstrip().split()))) 
+        arr.append(list(map(int, input().rstrip().split())))
 
-    # For printing the matrix 
-    for i in range(n): 
-        for j in range(n): 
-            print(arr[i][j], end = " ") 
-        print() 
+    print(arr)
+    result = diagonalDifference(arr)
 
-    print(len(arr))
-    print(sum(arr))
+    fptr.write(str(result) + '\n')
 
-
-"""
-11
-2
-4
-4
-5
-6
-10
-8
--12
-11 2 4 4 5 6 10 8 -12"""
+    fptr.close()
