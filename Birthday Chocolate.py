@@ -9,18 +9,21 @@ from array import *
 
 # Complete the birthday function below.
 def birthday(s, d, m):
-    print(s, d, m)
+    # print(s, d, m)
     count = 0
-    cycle = 0
-    if m > 1:
-        sq = s[0]
-        for i in range(1, len(s)):
-            sq += s[i]
-            cycle += 1
-            if sq == d and cycle == m:
-                count += 1
-
-            sq = s[i]
+    sq = 0
+    arr = []
+    if m> 1:
+        for j in s:
+            arr.append(j)
+            if len(arr) == m:
+                arr1 = array('q', arr)
+                sq  = sum(arr1)
+                if sq == d:
+                    count += 1
+                    del arr[0]
+                else:
+                    del arr[0]
         return count
     elif m == 1 and d == s[0]:
         return 1

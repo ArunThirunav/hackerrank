@@ -21,7 +21,7 @@ def breakingRecords(scores):
         elif scores[i] > max:
             maxVal += 1
             max = scores[i]
-    print(maxVal, minVal)
+    return (maxVal, minVal)
 
 
 if __name__ == '__main__':
