@@ -13,10 +13,10 @@ def migratoryBirds(arr):
     counter = Counter(arr)
     a = counter.most_common(1) 
     a = a[0][0] 
-    print(type(counter))
-    print(counter)
-    print(a)
-
+    # print(type(counter))
+    # print(counter)
+    # print(a)
+    return a
         
 if __name__ == '__main__':
 
