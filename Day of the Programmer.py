@@ -16,7 +16,7 @@ def dayOfProgrammer(year):
                 return ("12.09."+str(year))
         else:
             return ("13.09."+str(year))
-
+            
     elif 1700 <= year < 1918:
         if year % 4 == 0:
             return ("12.09."+str(year))
